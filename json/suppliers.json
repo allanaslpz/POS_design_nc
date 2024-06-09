@@ -1,0 +1,23 @@
+{
+    "data":[
+        {
+            "supplierID": "1",
+            "supplierName": "Engine Depot",
+            "supplierContact": "9059996546",
+            "supplierAddress": "Niagara Falls"
+        },
+        { 
+            "supplierID": "2",
+            "supplierName": "Parts Depot",
+            "supplierContact": "2895645555",
+            "supplierAddress": "St. Catharines"
+        },
+        { 
+            "supplierID": "3",
+            "supplierName": "Canadian Tire",
+            "supplierContact": "2895645553",
+            "supplierAddress": "St. Catharines"
+        }
+    ]
+    
+}

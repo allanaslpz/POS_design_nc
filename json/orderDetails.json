@@ -1,0 +1,19 @@
+{
+    "data":[
+        {
+            "productCode": "11212",
+            "productDesc": "Engine",
+            "cost": "100",
+            "quantity":"5",
+            "price":"125"
+        },
+        {
+            "productCode": "2212",
+            "productDesc": "Engine Screw",
+            "cost": "10",
+            "quantity":"10",
+            "price":"10.5"
+        }
+    ]
+    
+}

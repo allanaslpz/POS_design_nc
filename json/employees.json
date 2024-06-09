@@ -1,0 +1,35 @@
+{
+    "data":[
+        {
+            "employeeID": "1",
+            "employeeFirstName": "Emma",
+            "employeeLastName": "Watsons",
+            "employeeFull" : "Emma Watsons",
+            "employeeAddress": "NOTL",
+            "employeeContact":"9506465235",
+            "jobTitle": "Purchasing Manager",
+            "role": "Admin"
+        },
+        {
+            "employeeID": "2",
+            "employeeFirstName": "Harry",
+            "employeeLastName": "Potter",
+            "employeeFull" : "Harry Potter",
+            "employeeAddress": "NOTL",
+            "employeeContact":"9506465235",
+            "jobTitle": "Sales Associate",
+            "role": "user"
+        },
+        {
+            "employeeID": "3",
+            "employeeFirstName": "John",
+            "employeeLastName": "Smith",
+            "employeeFull" : "John Smith",
+            "employeeAddress": "St. Catharines",
+            "employeeContact":"9506465666",
+            "jobTitle": "Manager",
+            "role": "Admin"
+        }
+    ]
+    
+}

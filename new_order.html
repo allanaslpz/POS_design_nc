@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="https://kit.fontawesome.com/49caa8d480.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="/js/user.js" type="text/javascript"></script>
+    <title>Home</title>
+</head>
+
+<body>
+    <main class="" id="main"> 
+    <div class="container display-8">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="home.html"><img src="/img/logo_nav_white.png" alt="ESM LOGO" width="120px"
+                    /></a>
+                    <label id="username">Username</label>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    </ul>
+                    <form class="d-flex">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item dropdown ms-10">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-box-open"></i> &nbsp; Inventory
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="orders.html"><i class="fas fa-file-signature"></i> &nbsp; Orders</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="suppliers.html"><i class="fas fa-dolly"></i> &nbsp;Suppliers</a></li>
+                                    <li><a class="dropdown-item" href="products.html"><i class="fas fa-tachometer-alt"></i> &nbsp;Products</a></li>
+                                </ul>
+                            </li>
+                            <li tabindex="2" class="nav-item  dropdown ms-10">
+                                <a class="nav-link dropdown-toggle"role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-tags"></i> &nbsp; Sales
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="pos.html"><i class="fas fa-users"></i> &nbsp; POS</a></li>
+                                    <li><a class="dropdown-item" href="sales.html"><i class="fas fa-users"></i> &nbsp; Sales Record</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown ms-10">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fas fa-tools"></i> &nbsp; Maintenance
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="employees.html"><i class="fas fa-users"></i> &nbsp; Employees</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="customers.html"><i class="fas fa-user-alt"></i> &nbsp;Customers</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="reports.html"><i class="fas fas fa-chart-line"></i>&nbsp; Reports</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html"><i class="fas fa-sign-out-alt"> </i>&nbsp;Logout</a>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+    
+    
+    <div class="container pt-4">
+        <nav aria-label="breadcrumb" class="breadcrumb d-flex justify-content-between">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="home.html">Home</a>
+                </li>
+                <li class="breadcrumb-item"><a href="orders.html">Order</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Create New Order</li>
+            </ol>
+            <!-- <li class="btn-link help-popover" rel="popover" data-placement="bottom" data-title="Help Center" data-html="true" data-content="#"> <a href="#" >Help Center </a></li> -->
+            <li class="btn-link"  onclick="toggleSidebar()"><a href="#">Help</a></li>
+        </nav>
+        <div class="row">
+            <div class="col-sm">
+                <h3 class="">Create New Order</h3>
+            </div>
+        </div>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group col-md-6">
+                        <label for="orderNo" clas="bold">Order Number</label>
+                        <input type="number" class="form-control" id="orderNo" placeholder="Order Number" required >
+                        <div class="tooltip">
+                            Eg. 123
+                          </div>
+                        <input type="hidden" name="hdnOrderNo" id="hdnOrderNo">
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group col-md-6">
+                        <label for="sysCode">System Generated Code</label>
+                        <input type="text" class="form-control" id="sysCode" placeholder="AXX0000">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group col-md-6">
+                        <label for="orderDate" clas="bold">Order Date</label>
+                        <input type="date" class="form-control" id="orderDate" placeholder="Order Date">
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group col-md-6">
+                        <label for="status" clas="bold">Order Status</label>
+                        <select class="form-control " id="status">
+                            <option selected value="Open">Open</option>
+                            <option value="Ordered">Ordered</option>
+                            <option value="Received">Received</option>
+                        </select>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-sm">
+                <br>
+                <div class="d-flex justify-content-center align-content-center">
+                    <a href="#" class="btn btn-primary" id="btnSaveHeader">Save and Add Products</a>
+                    &nbsp;&nbsp;&nbsp;
+                    <a href="orders.html" class="btn btn-primary">Go Back to Orders</a>
+                </div>
+            </div>
+        <form>
+        <hr>
+        <form class="needs-validation" novalidate>
+        <div id="productDetails" class="d-none">
+            <h5>Add Product</h5>
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="form-group col-md-6">
+                            <label for="OrderDetailsProduct" clas="bold">Product</label>
+                            <input type="text" class="form-control" id="OrderDetailsProduct" placeholder="shaft" required>
+                            <input type="hidden" id="OrderCode" name="OrderCode">
+                            <input type="hidden" id="hdnIndex" name="hdnIndex">
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="form-group col-md-6">
+                            <label for="OrderDetailsCost">Cost</label>
+                            <input type="number" class="form-control" id="OrderDetailsCost" placeholder="10.5" required>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="form-group col-md-6">
+                            <label for="OrderDetailsQuantity">Quantity</label>
+                            <input type="number" class="form-control" id="OrderDetailsQuantity" placeholder="1" value ="1" required>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="form-group col-md-6">
+                            <br>
+                            <a href="#" class="btn btn-primary" id="btnAddProduct">Add Item</a>
+                        </div>
+                    </div>
+                </div>
+                <hr> 
+            <table id="ordersDetails" class="display compact table-striped" width="100%" ></table>
+        </div>
+    </main>
+    <!-- SideBar Help -->
+    <!-- <div class="sidebar-tab" id="sidebar-tab">
+        <div class="vertical-text text-center" id="sidebar-tab-text" onclick="toggleSidebar()"><span class="arrow vertical-text"></span>CLICK TO VIEW HELP<span class="arrow vertical-text"></span></div>
+      </div> -->
+      <div class="sidebar" id="sidebar">
+        <div class="container-liner">
+          <h4>CREATE NEW ORDER</h4>
+          <div>
+            This is the <b>Create New Order</b> page where you can navigate by pointing and clicking your mouse or tabbing using your keyboard and enter key. </br></br> 
+            <b>ORDER NUMBER</b> the value is auto generated but it can be editable based on your records. </br></br> 
+            <b>SYSTEM GENERATED CODE</b> this field holds the alt sys code from the old system. </br></br> 
+            <b>ORDER DATE</b> this field defaults to the current system date, but it can be set by clicking on the calendar popup. </br></br>
+            <b>ORDER STATUS</b> you can set the value of this field by clicking the dropdown list with Order, Ordered, Received options. </br></br> 
+            <b>SAVE AND ADD PRODUCTS</b> you can click this option to be able to Add Products on the same page. </br></br> 
+            <b>GO BACK TO ORDERS</b> click this option to navigate back to the Orders page.
+          </div>
+        </div>
+      </div>
+</body>
+</html>
+<script>
+
+// sidebar Help
+$(function(){
+  $("#sidebar-tab-text").width($("#sidebar").height());
+});
+$( window ).resize(function() {
+  $("#sidebar-tab-text").width($("#sidebar").height());
+});
+/* End of unsure centering */
+
+//The only necessary piece of code
+function toggleSidebar(){
+  $("#sidebar").toggleClass("move-to-left");
+  $("#sidebar-tab").toggleClass("move-to-left");
+  $("main").toggleClass("move-to-left-partly");
+  $(".arrow").toggleClass("active");
+}
+
+
+
+//helpcenter
+$(document).ready(function() {
+  $('.help-popover').popover({
+    placement: 'bottom',
+    title: 'CREATE NEW ORDER',
+    html: true,
+    content: "This is the <b>Create New Order</b> page where you can navigate by pointing and clicking your mouse or tabbing using your keyboard and enter key. </br></br> <b>ORDER NUMBER</b> the value is auto generated but it can be editable based on your records. </br></br> <b>SYSTEM GENERATED CODE</b> this field holds the alt sys code from the old system. </br></br> <b>ORDER DATE</b> this field defaults to the current system date, but it can be set by clicking on the calendar popup. </br></br> <b>ORDER STATUS</b> you can set the value of this field by clicking the dropdown list with Order, Ordered, Received options. </br></br> <b>SAVE AND ADD PRODUCTS</b> you can click this option to be able to Add Products on the same page. </br></br> <b>GO BACK TO ORDERS</b> click this option to navigate back to the Orders page."
+});
+//   $(document).on("click", ".popover .close" , function(){
+//         $(this).parents(".popover").popover('hide');
+//     });
+});
+
+//Tooltip
+tipTool("orderNo");
+    
+    function getProduct()
+    {
+        let sup = [];
+        let productList = JSON.parse(localStorage.getItem("productList"));
+        
+        if(productList)
+        {
+            for (let i = 0; i < productList.length; i++)
+            {
+                temp = {
+                            value: productList[i].productCode,
+                            label: productList[i].description,
+                            price: productList[i].initialPrice,
+                    }
+                sup.push(temp);
+            }
+        } 
+        return sup;
+    }
+    
+    projects = getProduct();
+    $( "#OrderDetailsProduct" ).autocomplete({
+        minLength: 0,
+        source: projects,
+        focus: function( event, ui ) {
+            $( "#OrderDetailsProduct" ).val( ui.item.label  );
+                return false;
+            },
+        select: function( event, ui ) {
+            $( "#OrderDetailsProduct" ).val( ui.item.label  );
+            $( "#OrderCode" ).val( ui.item.value );
+            $( "#OrderDetailsCost" ).val( ui.item.price );
+        return false;
+        }
+    })
+
+async function fetchData(req) {
+    let response = await fetch(req);
+    if (response.statusText == "OK") {
+        return await response.json();      
+    }else{
+        throw new Error(response.statusText);
+    }
+}
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+var table;
+let  dataSet = [];
+if (localStorage.getItem("orderDetails") != null || localStorage.getItem("orderDetails") != [] || localStorage.getItem("orderDetails") != undefined) 
+    //localStorage.removeItem("orderDetails");
+
+function validateForm()
+{
+    let prod = $("#OrderDetailsProduct")
+    let qty = $("#OrderDetailsCost")
+    let cost = $("#OrderDetailsQuantity")
+    let err = 0;
+    let msg = "Error: \n";
+    if(prod.val() == "")
+    {
+        prod.addClass('error');
+        msg += "Product cannot be empty \n";
+        err = 1;
+    }
+    if (qty.val() == "" )
+    {
+        qty.addClass('error');
+        msg += "Please add Product Quantity \n";
+        err = 1;
+    }
+    if ( cost.val() == "")
+    {
+        cost.addClass('error');
+        msg += "Please add Product Cost \n";
+        err = 1;
+    }
+    if(err == 0){
+        prod.removeClass('error');
+        qty.removeClass('error');
+        cost.removeClass('error');
+    }
+    else
+    {
+        alert(msg);
+    }
+    return err;
+}
+
+function randomNumberID(){
+    return Math.floor(Math.random()*(1000002 - 1 + 1)) + 1;
+}
+
+function getItems() {
+    dataSet.length = 0;
+    let orderList = JSON.parse(localStorage.getItem("orderDetails"));
+    
+    if(orderList)
+    {
+        for (let i = 0; i < orderList.length; i++){
+            let temp = {
+                orderIntID: orderList[i].orderIntID,
+                orderDetailsID: orderList[i].orderDetailsID,
+                productCode: orderList[i].productCode,
+                description: orderList[i].description,
+                cost: orderList[i].cost,
+                quantity: orderList[i].quantity,
+            };
+            if(orderList[i].orderIntID === $("#hdnOrderNo").val())
+            {
+                dataSet.push(temp);
+            }
+        }
+    } 
+}
+
+function getHeader(orderInfo)
+{
+    $("#hdnOrderNo").val(orderInfo);
+    $( "#btnSaveHeader" ).html('Save Changes');
+    
+    let orderList = JSON.parse(localStorage.getItem("orderHeader"));
+    for (let i = 0; i < orderList.length; i++)
+    {
+        if (orderList[i].orderIntID === orderInfo) 
+        {
+            $("#orderNo").val(orderList[i].orderNo);
+            $("#orderDate").val(orderList[i].orderDate);
+            $("#sysCode").val(orderList[i].sysCode);
+            $("#status").val(orderList[i].status);
+        }
+    }
+}
+
+$(document).ready(function () {
+    
+    
+    console.log(localStorage.getItem("orderInfo"));
+    if (localStorage.getItem("orderInfo") !== null) 
+    {
+        getHeader(localStorage.getItem("orderInfo"));
+        $("#productDetails").removeClass("d-none");
+    }
+    else
+    {
+        $("#orderNo").val(getRandomInt(1000));
+        let today = new Date().toISOString().split('T')[0];
+        $("#orderDate").val(today);
+    }
+    getItems();
+    table = $('#ordersDetails').DataTable({
+        data: dataSet,
+        columns: [
+            { title: 'Order Details ID',data: "orderDetailsID" },
+            { title: 'UPC', data: "productCode" },
+            { title: 'Description', data: "description" },
+            { title: 'Cost', data: "cost" },
+            { title: 'Quantity', data: "quantity" },
+            { title: 'Action' },
+        ],
+        columnDefs: [
+            {
+                targets: -1,
+                data: null,
+                defaultContent: '<button type="button" class="btn btn-primary btn-xs" id="edit-btn2">Edit</button>  <button type="button" class="btn btn-danger btn-xs" id="del-btn2">Remove Item</button>'
+            },
+            {
+                target: 0,
+                visible: false,
+            },
+            { orderable: false, searchable: false, targets: -1 }
+        ], 
+    });
+    
+
+    $( "#btnAddProduct" ).click(function() {
+        if(!validateForm())
+        {
+            $( "#btnAddProduct" ).html('Add Item');
+            var index = $("#hdnIndex");
+            if (index.val() == '')
+            {
+                addItem();
+            }
+            else{
+                addItem();
+                let orderList = JSON.parse(localStorage.getItem("orderDetails"));
+                //Delete from the storage
+                for(let i = 0; i < orderList.length; i++){
+                    if(orderList[i].orderDetailsID === index.val())
+                    {
+                        orderList.splice(i,1);
+                    }
+                }
+                localStorage.setItem("orderDetails", JSON.stringify(orderList));
+                alert("Product has been updated!");
+            }
+            index.val('');
+            getItems();
+            remakeDT();
+            clearProductFields();
+        }
+        
+    });
+
+    //delete
+    $('#ordersDetails tbody').on('click', "#del-btn2", function() {
+        var row = $(this).parents('tr')[0];
+        var data = table.row(row).data();
+        let confirmAction = confirm("Are you sure to remove item: "+data['description']+"?");
+        if (confirmAction) {
+            alert("Item Deleted");
+            let orderList = JSON.parse(localStorage.getItem("orderDetails"));
+            for(let i = 0; i < orderList.length; i++)
+            {
+                if (orderList[i].orderDetailsID === data['orderDetailsID'])
+                {
+                    orderList.splice(i,1);
+                }
+            }
+            localStorage.setItem("orderDetails", JSON.stringify(orderList)); //reset the values in the local storage
+        } 
+        getItems();
+        remakeDT();
+    });
+    //edit
+    $('#ordersDetails tbody').on('click', "#edit-btn2", function() {
+        var row = $(this).parents('tr')[0];
+        var data = table.row(row).data();
+    
+        let orderList = JSON.parse(localStorage.getItem("orderDetails"));
+        for (let i = 0; i < orderList.length; i++)
+        {
+            if (orderList[i].orderDetailsID === data['orderDetailsID']) 
+            {
+                $("#OrderCode").val(orderList[i].productCode);
+                $("#OrderDetailsProduct").val(orderList[i].description);
+                $("#OrderDetailsCost").val(orderList[i].cost);
+                $("#OrderDetailsQuantity").val(orderList[i].quantity);
+            }
+        }
+        $("#hdnIndex").val(data['orderDetailsID']);
+        $( "#btnAddProduct" ).html('Update Item');
+    });
+
+    $( "#btnSaveHeader" ).click(function() {
+        $( "#btnSaveHeader" ).html('Save Changes');
+
+        if( $("#hdnOrderNo").val() == '')
+        {
+            alert( "New Order Created! Please add products to the order" );
+            addHeader();
+            $("#productDetails").removeClass("d-none");
+        }
+        else
+        {
+            addHeader();
+            let orderHeader = JSON.parse(localStorage.getItem("orderHeader"));
+            //Delete from the storage
+            for(let i = 0; i < orderHeader.length; i++){
+                if(orderHeader[i].orderIntID === $("#hdnOrderNo").val())
+                {
+                    orderHeader.splice(i,1);
+                }
+            }
+            localStorage.setItem("orderHeader", JSON.stringify(orderHeader));
+            
+            alert("Order has been updated!");
+        }
+        
+    });
+});    
+//todo
+
+
+function addHeader()
+{
+    var orderIntID;
+    if (localStorage.getItem("orderInfo") !== null) 
+    {
+        orderIntID = localStorage.getItem("orderInfo");
+    }
+    else
+    {
+        orderIntID = randomNumberID() + $("#orderNo").val() + randomNumberID();
+        $("#hdnOrderNo").val(orderIntID);
+    }
+
+    let newDs = {
+        orderIntID: orderIntID,
+        orderNo: $("#orderNo").val(),
+        sysCode: $("#sysCode").val(),
+        orderDate: $("#orderDate").val(),
+        status: $("#status").val(),
+    };
+    if (localStorage.getItem("orderHeader") === null || localStorage.getItem("orderHeader") === [] || localStorage.getItem("orderHeader") === undefined) 
+    {
+        let orderHeader = [];
+        orderHeader.push(newDs);
+        localStorage.setItem("orderHeader", JSON.stringify(orderHeader));
+    } 
+    else
+    {
+        let orderHeader = JSON.parse(localStorage.getItem("orderHeader"));
+        orderHeader.push(newDs);
+        localStorage.setItem("orderHeader", JSON.stringify(orderHeader));
+    }
+    //dataSet.push(newDs);
+}
+
+function clearProductFields()
+{
+    $("#OrderCode").val('');
+    $("#OrderDetailsProduct").val('');
+    $("#OrderDetailsCost").val('');
+    $("#OrderDetailsQuantity").val('');
+}
+
+function remakeDT()
+{
+    $('#ordersDetails').DataTable().clear();
+    $('#ordersDetails').DataTable().destroy();
+        table = $('#ordersDetails').DataTable({
+            data: dataSet,
+            columns: [
+                { title: 'Order Details ID',data: "orderDetailsID" },
+                { title: 'UPC', data: "productCode" },
+                { title: 'Description', data: "description" },
+                { title: 'Cost', data: "cost" },
+                { title: 'Quantity', data: "quantity" },
+                { title: 'Action' },
+            ],
+            columnDefs: [
+                {
+                    targets: -1,
+                    data: null,
+                    defaultContent: '<button type="button" class="btn btn-primary btn-xs" id="edit-btn2">Edit</button>  <button type="button" class="btn btn-danger btn-xs" id="del-btn2">Remove Item</button>'
+                },
+                {
+                    target: 0,
+                    visible: false,
+                },
+                { orderable: false, searchable: false, targets: -1 }
+            ], 
+        });
+}
+
+function addItem()
+{
+    const orderID = randomNumberID() + $("#OrderDetailsProduct").val() + randomNumberID();
+    
+    let newDs = {
+        orderDetailsID: orderID,
+        orderIntID: $("#hdnOrderNo").val(),
+        productCode: $("#OrderCode").val().toUpperCase(),
+        description: $("#OrderDetailsProduct").val(),
+        cost: $("#OrderDetailsCost").val(),
+        quantity: $("#OrderDetailsQuantity").val()
+    };
+    if (localStorage.getItem("orderDetails") === null || localStorage.getItem("orderDetails") === [] || localStorage.getItem("orderDetails") === undefined) 
+    {
+        let orderList = [];
+        orderList.push(newDs);
+        localStorage.setItem("orderDetails", JSON.stringify(orderList));
+    } 
+    else
+    {
+        let orderList = JSON.parse(localStorage.getItem("orderDetails"));
+        orderList.push(newDs);
+        localStorage.setItem("orderDetails", JSON.stringify(orderList));
+    }
+    
+}
+const loginUser = user.map(({ username }) => username);
+  document.getElementById("username").innerHTML = "Hello " + loginUser + "!";
+</script>

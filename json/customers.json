@@ -1,0 +1,29 @@
+{
+    "data":[
+        {
+            "customerID": "1",
+            "customerFirstName": "Emma",
+            "customerLastName": "Watsons",
+            "customerFull" : "Emma Watsons",
+            "customerAddress": "NOTL",
+            "customerContact":"9506465235"
+        },
+        {
+            "customerID": "2",
+            "customereFirstName": "Ben",
+            "customerLastName": "Wallace",
+            "customerFull" : "Ben Wallace",
+            "customerAddress": "NOTL",
+            "customerContact":"9506465235"
+        },
+        {
+            "customerID": "3",
+            "customerFirstName": "Ben",
+            "customerLastName": "Ten",
+            "customerFull" : "Ben Ten",
+            "customerAddress": "St. Catharines",
+            "customerContact":"9506465666"
+        }
+    ]
+    
+}

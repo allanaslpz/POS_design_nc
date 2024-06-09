@@ -1,0 +1,326 @@
+.icon-color {
+  color: #a77966;
+}
+.btn {
+  background-color: #a77966;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+label {
+  color: #a77966;
+}
+label {
+  font-weight: 500;
+}
+table.dataTable.display > tbody > tr.odd > .sorting_1,
+table.dataTable.order-column.stripe > tbody > tr.odd > .sorting_1 {
+  box-shadow: inset 0 0 0 9999px rgb(167 132 102 / 30%);
+}
+table.dataTable.display > tbody > tr.even > .sorting_1,
+table.dataTable.order-column.stripe > tbody > tr.even > .sorting_1 {
+  box-shadow: inset 0 0 0 9999px rgb(167 132 102 / 10%);
+}
+table.dataTable.stripe > tbody > tr.odd > *,
+table.dataTable.display > tbody > tr.odd > * {
+  box-shadow: inset 0 0 0 9999px rgb(167 132 102 / 5%);
+}
+
+.error {
+  border: 1px solid #c00;
+}
+.nav-link {
+  color: #a77966;
+  font-weight: 700;
+}
+.dropdown-menu {
+  --bs-dropdown-link-hover-bg: #a77966;
+  --bs-dropdown-link-hover-color: white;
+}
+ul.ui-autocomplete {
+  z-index: 1100;
+}
+
+.card {
+  width: 18rem;
+}
+
+.mb-3 a p {
+  color: black;
+}
+.mb-3 a {
+  text-decoration: none;
+}
+.mb-3 {
+  margin: 2rem auto !important;
+}
+
+/* tooltip*/
+.tooltip {
+  position: absolute;
+  background: #d7e3f9;
+  color: #4c4c80;
+  padding: 5px 15px;
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  z-index: 300;
+  font-size: 12px;
+  line-height: 1.5rem;
+  border: 1px solid #a3b7dc;
+  box-shadow: 1px 2px 8px rgba(0, 0, 100, 0.2);
+  opacity: 0;
+  transition-duration: 0.2s;
+  transition-property: opacity;
+}
+
+/* .validation-failed::placeholder{color: red !important;}
+  .validation-failed::-webkit-input-placeholder{color: red !important;}
+  .validation-failed::-moz-placeholder{color: red !important;}
+  .validation-failed::-ms-input-placeholder{color: red !important;} */
+
+.form-control.error::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: red;
+  opacity: 1; /* Firefox */
+}
+
+span {
+  color: red;
+  font-size: 0.75rem;
+  padding-left: 1rem;
+}
+
+/* HelpModal */
+#myModal {
+  overflow-y: hidden;
+}
+.modal-header {
+  cursor: move;
+}
+
+/* helpcenter */
+.popover-title {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.container-fluid {
+  background-color: #a77966 !important;
+}
+#navbarSupportedContent > form > ul > li > a {
+  color: white !important;
+}
+#username {
+  color: white;
+  margin-left: 5rem;
+}
+
+/* (A) "SETTINGS" */
+:root {
+  /* (A1) DIMENSIONS */
+  --tog-width: 60px;
+  --tog-height: 30px;
+  --tog-c-offset: 4px;
+  --tog-c-dim: calc(var(--tog-height) - (var(--tog-c-offset) * 2));
+
+  /* (A2) COLORS */
+  --tog-off: #cacaca;
+  --tog-on: #a77966;
+  --tog-c-back: #fff;
+
+  /* (A3) SYMBOLS */
+  --tog-indicate: "\2758";
+}
+/* (B) TOGGLE BUTTON CONTAINER */
+.tog {
+  position: relative; /* necessary for (b2) position:absolute */
+  display: inline-block;
+  width: var(--tog-width);
+  height: var(--tog-height);
+}
+.tog,
+.tog * {
+  box-sizing: border-box;
+}
+
+/* (B2) BACKGROUND USING <I> */
+.tog i {
+  /* (B2-1) FULLY FILL <LABEL> CONTAINER */
+  display: block;
+  position: absolute;
+  top: 0px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  /* (B2-2) COSMETICS */
+  cursor: pointer;
+  background: var(--tog-off);
+}
+
+/* (B3) HIDE DEFAULT CHECKBOX */
+.tog input {
+  display: none;
+}
+/* (C) "INNER TOGGLE BUTTON" USING <I::BEFORE> */
+.tog i::before {
+  /* (C1) DIMENSIONS & DEFAULT LEFT POSITION */
+  content: "";
+  position: absolute;
+  top: var(--tog-c-offset);
+  left: var(--tog-c-offset);
+  width: var(--tog-c-dim);
+  height: var(--tog-c-dim);
+
+  /* (C2) COSMETICS */
+  background: var(--tog-c-back);
+}
+
+/* (D) "ON CHECKED" */
+/* (D1) CHANGE BACKGROUND COLOR */
+.tog input:checked + i {
+  background: var(--tog-on);
+}
+
+/* (D2) MOVE "INNER TOGGLE BUTTON" TO RIGHT SIDE */
+.tog input:checked + i::before {
+  left: auto;
+  right: var(--tog-c-offset);
+}
+
+/* (E) ROUNDED */
+.round i {
+  border-radius: var(--tog-height);
+}
+.round i::before {
+  border-radius: 50%;
+}
+
+/* (F) "ON" INDICATOR */
+.indicate input:checked + i::before {
+  content: var(--tog-indicate);
+  color: var(--tog-on);
+  font-style: normal;
+  text-decoration: none;
+  font-weight: 900;
+  text-align: center;
+}
+
+/*Employee enable disable account */
+#employees > tbody > tr > td:nth-child(4) > label {
+  position: relative;
+  top: 10px;
+}
+
+#employees > thead > tr > th.sorting_disabled,
+#employees > tbody > tr > td:nth-child(4) {
+  text-align: center;
+}
+
+@media screen and (max-width: 1400px) and (min-width: 1000px) {
+  .row {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+}
+
+/* Allan Sidebar */
+
+
+main {
+  transition: transform .7s ease-in-out;
+}
+
+.move-to-left {
+  transform: translateX(-400px);
+}
+.move-to-left-partly {
+  transform: translateX(-200px);
+}
+.sidebar {
+  height: 100%;
+  width: 400px;
+  position: fixed;
+  top: 3rem;
+  z-index: 1;
+  right: -400px;
+  background-color: #FFF;
+  box-shadow: 0 1rem 5rem rgba(0, 0, 0, 0.4);
+  transition: transform .7s ease-in-out;
+  font-size: 15px;
+}
+.container-liner{
+  margin-left:.5rem;
+  margin-right:.5rem;
+}
+.sidebar-tab {
+  height: 100%;
+  width: 2rem;
+  position: fixed;
+  top: 3rem;
+  z-index: 1;
+  right: 0;
+  background-color: #FFF;
+  box-shadow: 0 1rem 5rem rgba(0, 0, 0, 0.4);
+  transition: transform .7s ease-in-out;
+  font-weight: bold;
+}
+#sidebar-tab-text{ 
+    width: 400px;
+}
+.vertical-text {
+	transform: rotate(90deg);
+	transform-origin: left 2rem;
+  vertical-align:middle;
+}
+.arrow {
+  box-sizing: border-box;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  transform: rotate(0deg);
+  transition: all 0.5s ease-in-out;
+  width: 32px;
+  height: 32px;
+  z-index: 1;
+}
+.arrow:after, .arrow:before {
+  content: "";
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  transition: all 0.25s ease-in-out;
+  border-radius: 10px;
+  background: #000;
+  width: 16px;
+  height: 3.2px;
+  top: 14.4px;
+}
+.arrow:after {
+  transform: rotate(44deg);
+  left: 3.2px;
+}
+.arrow:before {
+  right: 3.2px;
+  transform: rotate(-44deg);
+}
+.arrow.active:after {
+  transform: rotate(-44deg);
+}
+.arrow.active:before {
+  transform: rotate(44deg);
+}
+/* .card {
+  margin-right: 260px;
+  margin-left: 225px;
+  box-shadow: .5rem .5rem 2rem rgba(0, 0, 0, 0.4);
+} */
+.card-text {
+  color: #000;
+}
+

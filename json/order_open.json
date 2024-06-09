@@ -1,0 +1,19 @@
+{
+    "data":[
+        {
+            "orderno": "1",
+            "syscode": "b12",
+            "amounttotal": "120,000",
+            "orderdate":"5/12/2022",
+            "status":"Open"
+        },
+        {
+            "orderno": "2",
+            "syscode": "cx12",
+            "amounttotal": "330,000",
+            "orderdate":"5/12/2022",
+            "status":"Open"
+        }
+    ]
+    
+}

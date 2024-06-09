@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="https://kit.fontawesome.com/49caa8d480.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="/js/user.js" type="text/javascript"></script>
+    <title>Home</title>
+</head>
+
+<body>
+    <main class="" id="main"> 
+    <div class="container display-8">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="home.html"><img src="/img/logo_nav_white.png" alt="ESM LOGO" width="120px"
+                    /></a>
+                    <label id="username">Username</label>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    </ul>
+                    <form class="d-flex">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item dropdown ms-10">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-box-open"></i> &nbsp; Inventory
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="orders.html"><i class="fas fa-file-signature"></i> &nbsp; Orders</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="suppliers.html"><i class="fas fa-dolly"></i> &nbsp;Suppliers</a></li>
+                                    <li><a class="dropdown-item" href="products.html"><i class="fas fa-tachometer-alt"></i> &nbsp;Products</a></li>
+                                </ul>
+                            </li>
+                            <li tabindex="2" class="nav-item  dropdown ms-10">
+                                <a class="nav-link dropdown-toggle"role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-tags"></i> &nbsp; Sales
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="pos.html"><i class="fas fa-users"></i> &nbsp; POS</a></li>
+                                    <li><a class="dropdown-item" href="sales.html"><i class="fas fa-users"></i> &nbsp; Sales Record</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown ms-10">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fas fa-tools"></i> &nbsp; Maintenance
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="employees.html"><i class="fas fa-users"></i> &nbsp; Employees</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="customers.html"><i class="fas fa-user-alt"></i> &nbsp;Customers</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="reports.html"><i class="fas fas fa-chart-line"></i>&nbsp; Reports</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html"><i class="fas fa-sign-out-alt"> </i>&nbsp;Logout</a>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+    
+    
+    <div class="container pt-4">
+        <nav aria-label="breadcrumb" class="breadcrumb d-flex justify-content-between">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="home.html">Home</a>
+                </li>
+                <li class="breadcrumb-item"><a href="sales.html">Sales</a></li>
+                <li class="breadcrumb-item active" aria-current="page">POS</li>
+            </ol>
+            <!-- <li class="btn-link help-popover" rel="popover" data-placement="bottom" data-title="Help Center" data-html="true" data-content="#"> <a href="#" >Help Center </a></li> -->
+            <li class="btn-link"  onclick="toggleSidebar()"><a href="#">Help</a></li>
+        </nav>
+        <div class="row">
+            <div class="col-sm">
+                <h3 class="">POS</h3>
+            </div>
+        </div>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group col-md">
+                        <label for="InvoiceNo" clas="bold">Invoice Number</label>
+                        <input type="number" class="form-control" id="InvoiceNo" placeholder="Invoice Number" required disabled>
+                        <input type="hidden" name="hdnInvoiceNo" id="hdnInvoiceNo">
+                        <input type="hidden" name="hdnGrandTotal" id="hdnGrandTotal">
+                        <input type="hidden" name="hdnBeforeTax" id="hdnBeforeTax">
+                        <input type="hidden" name="hdnTax" id="hdnTax">
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group col-md">
+                        <label for="salesDate" clas="bold">Sales Date</label>
+                        <input type="date" class="form-control" id="salesDate" placeholder="Sales Date">
+                    </div>
+                </div>
+                
+                <div class="col-sm">
+                    <div class="form-group col-md">
+                        <label for="salesDate" clas="bold">Customer Full Name</label>
+                        <input type="text" class="form-control" style="display: inline-block;" id="customer" placeholder="Full Name" required >
+                        <div class="tooltip">
+                            Eg. John Smith
+                          </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <label for="status" clas="bold">&nbsp;</label>
+                    <div class="form-group col-md">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal">
+                            Add New Customer
+                        </button>
+                    </div>
+                </div>
+            </div>
+        <form>
+        <hr style=" border-top: 2px solid">
+        <form class="needs-validation" novalidate>
+        <div id="productDetails">
+            <h5>Add Product</h5>
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="form-group col-md">
+                            <label for="salesDetailsProduct" clas="bold">Product</label>
+                            <input type="text" class="form-control" id="salesDetailsProduct" placeholder="shaft" required>
+                            <div class="tooltip">
+                                Eg. shaft
+                              </div>
+                            <input type="hidden" id="OrderCode" name="OrderCode">
+                            <input type="hidden" id="hdnIndex" name="hdnIndex">
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="form-group col-md">
+                            <label for="salesDetailsCost">Price</label>
+                            <input type="number" class="form-control" id="salesDetailsCost" placeholder="10.5" required readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="form-group col-md">
+                            <label for="salesDetailsQuantity">Quantity</label>
+                            <input type="number" class="form-control" id="salesDetailsQuantity" placeholder="1" required value="1">
+                            <div class="tooltip">
+                                Eg. 1
+                              </div>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="form-group col-md">
+                            <br>
+                            <a href="#" class="btn btn-primary" id="btnAddProduct">Add Item</a>
+                            &nbsp;&nbsp;&nbsp;
+                            <a href="sales.html" class="btn btn-primary">Go Back to Sales</a>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row alert alert-primary " role="alert">
+                    <div class="col-sm">
+                        <div class="form-group col-md">
+                            &nbsp;
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="form-group col-md">
+                            &nbsp;
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="form-group col-md">
+                            <label for="beforeTax" clas="bold">Total Before Tax</label>
+                            <input type="text" class="form-control" id="beforeTax" placeholder="0.00" disabled>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="form-group col-md">
+                            <label for="serial" clas="bold">Tax</label>
+                            <input type="text" class="form-control" id="tax" placeholder="0.00" disabled>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="form-group col-md">
+                            <label for="grandTotal" clas="bold">Grand Total</label>
+                            <input type="text" class="form-control" id="grandTotal"placeholder="0.00" disabled>
+                        </div>
+                    </div>
+                </div>
+                <hr> 
+            <table id="ordersDetails" class="display compact table-striped" width="100%" ></table>
+            <div class="container pt-4">
+                <div class="row">
+                    <div class="d-flex justify-content-center align-content-center">
+                        <a href="invoice.html" target="_explorer.exe" class="btn btn-primary d-none" id="printInvoice">Print Invoice</a>
+                        &nbsp;&nbsp;&nbsp;
+                        <button type="button" class="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#paymentModal" id="payment">
+                           Payment
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Customer</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="form-group col-md">
+                            <label for="customerFName" clas="bold">First Name</label><span id="err-customerFName" class="d-none">*This field is required</span>
+                            <input type="text" class="form-control" id="customerFName" placeholder="Customer First Name" required>
+                            <div class="tooltip">
+                                Eg. John
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="form-group col-md">
+                            <label for="customerLName" clas="bold">Last Name</label><span id="err-customerLName" class="d-none">*This field is required</span>
+                            <input type="text" class="form-control" id="customerLName" placeholder="Customer Last Name" required>
+                            <div class="tooltip">
+                                Eg. Smith
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="form-group col-md">
+                            <label for="contact" class="bold">Contact Number</label><span id="err-contact" class="d-none">*This field is required</span>
+                            <input type="text" class="form-control" id="contact" placeholder="905 xxx - xxxx" required>
+                            <div class="tooltip">
+                                Eg. 905 123 4567
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="form-group col-md">
+                            <label for="address" class="bold">Adddress 1</label><span id="err-address" class="d-none">*This field is required</span>
+                            <input type="text" class="form-control" id="address" placeholder="Street address or PO BOX" required>
+                            <div class="tooltip">
+                                Eg. 123 Lundys Lane
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="form-group col-md">
+                            <label for="address2" class="bold">Adddress 2</label>
+                            <input type="text" class="form-control" id="address2" placeholder="Apt, Suite, Unit, Building" required>
+                            <div class="tooltip">
+                                Eg. Unit 5
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="form-group col-md">
+                            <label for="city" class="bold">City</label><span id="err-city" class="d-none">*This field is required</span>
+                            <input type="text" class="form-control" id="city" placeholder="Niagara Falls" required>
+                            <div class="tooltip">
+                                Eg. Niagara Falls
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="form-group col-md">
+                            <label for="province" clas="bold">Province</label>
+                            <input type="text" class="form-control" id="province" placeholder="Ontario" disabled>
+                            <!-- <select name="province" id="province" class="form-control  form-select" disabled>
+                                <option value="0">SELECT PROVINCE</option>
+                                <option value="AB">Alberta</option>
+                                <option value="BC">British Columbia</option>
+                                <option value="MB">Manitoba</option>
+                                <option value="NB">New Brunswick</option>
+                                <option value="NL">Newfoundland and Labrador</option>
+                                <option value="NS">Nova Scotia</option>
+                                <option value="NT">Northwest Territories</option>
+                                <option value="NU">Nunavut</option>
+                                <option value="ON" selected>Ontario</option>
+                                <option value="PE">Prince Edward Island</option>
+                                <option value="QC">Quebec</option>
+                                <option value="SK">Saskatchewan</option>
+                                <option value="YT">Yukon</option>
+                            </select> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="form-group col-md">
+                            <label for="postal" class="bold">Postal</label><span id="err-postal" class="d-none">*This field is required</span>
+                            <input type="text" class="form-control" id="postal" placeholder="X0X-0X0" required>
+                            <div class="tooltip">
+                                Eg. L0S 1J0
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="clearFields();">Close/Disregard</button>
+                <button type="button" class="btn btn-primary" id="btnSave">Save changes</button>
+            </div>
+            </div>
+        </div>
+    </div>
+        <!-- Payment Modal-->
+        <div class="modal fade" id="paymentModal" tabindex="-1" role="dialog" aria-labelledby="ex" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ex">Payments</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm">
+                            <div class="form-group col-md">
+                                <label for="postal" class="bold">Total</label>
+                                <input type="text" class="form-control" id="paymentTotal" required readonly disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <div class="form-group col-md">
+                                <label for="province" clas="bold">Select Payment Type</label>
+                                <select name="paymentType" id="paymentType" class="form-control  form-select">
+                                    <option value="0">Select Payment Type</option>
+                                    <option value="AB">Credit</option>
+                                    <option value="AB">Debit</option>
+                                    <option value="BC">Cash</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="card"  class="d-none">
+                        <div class="row" >
+                            <div class="col-sm">
+                                <div class="form-group col-md">
+                                    <label for="cardNo" class="bold">Card Number</label><span id="err-cardNo" class="d-none">*This field is required</span>
+                                    <input type="number" class="form-control" id="cardNo" required maxlength="16">
+                                    <div class="tooltip">
+                                        Eg. 1234567891234567
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" >
+                            <div class="col-sm">
+                                <div class="form-group col-md">
+                                    <label for="expDate" class="bold">Expiration Date</label><span id="err-expDate" class="d-none">*This field is required</span>
+                                    <input type="text" class="form-control" id="expDate" required placeholder="12/12">
+                                    <div class="tooltip">
+                                        Month/Year (Eg. 10/22)
+                                      </div>
+                                </div>
+                                <div class="form-group col-md">
+                                    <label for="cvv" class="bold">CVV</label><span id="err-cvv" class="d-none">*This field is required</span>
+                                    <input type="text" class="form-control" id="cvv" required placeholder="123">
+                                    <div class="tooltip">
+                                        Eg. 123
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div  id="cash" class="d-none">
+                        <div class="row ">
+                            <div class="col-sm">
+                                <div class="form-group col-md">
+                                    <label for="amountPaid" class="bold">Amount Paid</label>
+                                    <input type="text" class="form-control" id="amountPaid" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="btnSave" onclick="validateCustomer(1);">Submit Payment</button>
+                </div>
+                </div>
+            </div>
+        </div>
+<!-- SideBar Help -->
+<!-- <div class="sidebar-tab" id="sidebar-tab">
+    <div class="vertical-text text-center" id="sidebar-tab-text" onclick="toggleSidebar()"><span class="arrow vertical-text"></span>CLICK TO VIEW HELP<span class="arrow vertical-text"></span></div>
+  </div> -->
+  <div class="sidebar" id="sidebar">
+    <div class="container-liner">
+      <h4>POINT OF SALES Page</h4>
+      <div>
+        This is the <b>Point of Sale (POS)</b> page where you can navigate by pointing and clicking your mouse or tabbing using your keyboard and enter key. </br></br> 
+        <b>INVOICE NUMBER</b> the value is auto generated and cannot be edited. </br></br> 
+        <b>SALES DATE</b> this field defaults to the current system date, but it can be customized by clicking on the calendar popup. </br></br> 
+        <b>CUSTOMER FULL NAME</b> you can enter the customer’s complete name in this field. </br></br> 
+        <b>ADD NEW CUSTOMER</b> this option opens a popup form where you can input the customer information. </br></br> 
+        <b>PRODUCT</b> this is an autocomplete search field and you can type the characters of the item in this field. </br></br> 
+        <b>PRICE</b> this is an auto generated field based on the product selected. </br></br> 
+        <b>QUANTITY</b> you can enter a numerical figure in this field. </br></br> 
+        <b>ADD ITEM</b> click this option if you want to add an item. </br></br> 
+        <b>GO BACK TO SALES</b> click this option to navigate back to the Sales page.
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+<script>
+
+// sidebar Help
+$(function(){
+  $("#sidebar-tab-text").width($("#sidebar").height());
+});
+$( window ).resize(function() {
+  $("#sidebar-tab-text").width($("#sidebar").height());
+});
+/* End of unsure centering */
+
+//The only necessary piece of code
+function toggleSidebar(){
+  $("#sidebar").toggleClass("move-to-left");
+  $("#sidebar-tab").toggleClass("move-to-left");
+  $("main").toggleClass("move-to-left-partly");
+  $(".arrow").toggleClass("active");
+}
+
+
+//helpcenter
+$(document).ready(function() {
+  $('.help-popover').popover({
+    placement: 'bottom',
+    title: 'POINT OF SALE PAGE',
+    html: true,
+    content: "This is the <b>Point of Sale (POS)</b> page where you can navigate by pointing and clicking your mouse or tabbing using your keyboard and enter key. </br></br> <b>INVOICE NUMBER</b> the value is auto generated and cannot be edited. </br></br> <b>SALES DATE</b> this field defaults to the current system date, but it can be customized by clicking on the calendar popup. </br></br> <b>CUSTOMER FULL NAME</b> you can enter the customer’s complete name in this field. </br></br> <b>ADD NEW CUSTOMER</b> this option opens a popup form where you can input the customer information. </br></br> <b>PRODUCT</b> this is an autocomplete search field and you can type the characters of the item in this field. </br></br> <b>PRICE</b> this is an auto generated field based on the product selected. </br></br> <b>QUANTITY</b> you can enter a numerical figure in this field. </br></br> <b>ADD ITEM</b> click this option if you want to add an item. </br></br> <b>GO BACK TO SALES</b> click this option to navigate back to the Sales page."
+  });
+//   $(document).on("click", ".popover .close" , function(){
+//         $(this).parents(".popover").popover('hide');
+//     });
+});
+
+//Tooltip
+tipTool("customer");
+tipTool("salesDetailsProduct");
+tipTool("salesDetailsQuantity");
+tipTool("cardNo");
+tipTool("expDate");
+tipTool("cvv");
+tipTool("customerFName");
+tipTool("customerLName");
+tipTool("contact");
+tipTool("address");
+tipTool("address2");
+tipTool("city");
+tipTool("postal");
+
+var cities = ['Barrie',
+'Belleville',
+'Brampton',
+'Brant',
+'Brantford',
+'Brockville',
+'Burlington',
+'Cambridge',
+'Clarence-Rockland',
+'Cornwall',
+'Dryden',
+'Elliot Lake',
+'Greater Sudbury',
+'Guelph',
+'Haldimand County',
+'Hamilton',
+'Kawartha Lakes',
+'Kenora',
+'Kingston',
+'Kitchener',
+'London',
+'Markham',
+'Mississauga',
+'Niagara Falls',
+'Norfolk County',
+'North Bay',
+'Orillia',
+'Oshawa',
+'Ottawa',
+'Owen Sound',
+'Pembroke',
+'Peterborough',
+'Pickering',
+'Port Colborne',
+'Prince Edward County',
+'Quinte West',
+'Richmond Hill',
+'Sarnia',
+'Sault Ste. Marie',
+'St. Catharines',
+'St. Thomas',
+'Stratford',
+'Temiskaming Shores',
+'Thorold',
+'Thunder Bay',
+'Timmins',
+'Toronto',
+'Vaughan',
+'Waterloo]',
+'Welland',
+'Windsor',
+'Woodstock'
+];
+
+
+arr = ['customerFName','customerLName','contact','address', 'city', 'province', 'postal'];
+arrPayment = ['cardNo','expDate','cvv'];
+//new validation
+function validateCustomer(type=0)
+{
+    if(type==0)
+    {
+        arr = arr;
+    }
+    else
+    {
+        arr = arrPayment;
+    }
+    let err = 0;
+    let msg = "Error: \n";
+    arr.forEach(element => {
+        let e = $('#'+element);
+        let ee =  $('#err-'+element);
+        if(e.val()=="")
+        {
+            e.addClass('error');
+            //e.attr('role','alert');
+            ee.removeClass('d-none');
+            //e.val('*this is required');
+           // e.attr("placeholder", "This is required");
+            err = 1;
+        }
+    });
+    if(err == 0){
+        arr.forEach(element => {
+            let e = $('#'+element);
+            let ee =  $('#err-'+element);
+            e.removeClass('error');
+            ee.addClass('d-none');
+        });
+    }
+
+    return err;
+}
+function clearFields()
+{
+    arr.forEach(element => {
+            let e = $('#'+element);
+            let ee =  $('#err-'+element);
+            e.removeClass('error');
+            ee.addClass('d-none');
+        });
+}
+// function validateCustomer()
+// {
+//     let fName = $("#customerFName")
+//     let lName = $("#customerLName")
+//     let contact = $("#contact")
+//     let address = $("#address1")
+//     let city = $("#city")
+//     let province = $("#province")
+//     let postalCode = $("#postal")
+//     let err = 0;
+//     let msg = "Error: \n";
+//     if(fName.val() == "")
+//     {
+//         fName.addClass('error');
+//         msg += "First Name is required \n";
+//         err = 1;
+//     }
+//     if (lName.val() == "" )
+//     {
+//         lName.addClass('error');
+//         msg += "Last Name is required \n";
+//         err = 1;
+//     }
+//     if ( contact.val() == "")
+//     {
+//         contact.addClass('error');
+//         msg += "Please enter a phone number \n";
+//         err = 1;
+//     }
+//     if ( address.val() == "")
+//     {
+//         address.addClass('error');
+//         msg += "Please enter an address\n";
+//         err = 1;
+//     }
+//     if ( city.val() == "")
+//     {
+//         city.addClass('error');
+//         msg += "Please enter a city \n";
+//         err = 1;
+//     }
+//     if ( province.val() == "")
+//     {
+//         province.addClass('error');
+//         msg += "Please select a province \n";
+//         err = 1;
+//     }
+//     if ( postalCode.val() == "")
+//     {
+//         postalCode.addClass('error');
+//         msg += "Please enter a correct postal code\n";
+//         err = 1;
+//     }
+//     if(err == 0){
+//         fName.removeClass('error');
+//         lName.removeClass('error');
+//         contact.removeClass('error');
+//         address.removeClass('error');
+//         city.removeClass('error');
+//         province.removeClass('error');
+//         postalCode.removeClass('error');
+//     }
+//     else
+//     {
+//         alert(msg);
+//     }
+//     return err;
+// }
+    function getProduct()
+    {
+        let sup = [];
+        let productList = JSON.parse(localStorage.getItem("productList"));
+        
+        if(productList)
+        {
+            for (let i = 0; i < productList.length; i++)
+            {
+                temp = {
+                        value: productList[i].productCode,
+                        label: productList[i].description,
+                        price: (productList[i].initialPrice * 1.2).toFixed(2),
+                    }
+                sup.push(temp);
+            }
+        } 
+        return sup;
+    }
+    
+    projects = getProduct();
+    $( "#salesDetailsProduct" ).autocomplete({
+        minLength: 0,
+        source: projects,
+        focus: function( event, ui ) {
+            $( "#salesDetailsProduct" ).val( ui.item.label  );
+                return false;
+            },
+        select: function( event, ui ) {
+            $( "#salesDetailsProduct" ).val( ui.item.label  );
+            $( "#OrderCode" ).val( ui.item.value );
+            $( "#salesDetailsCost" ).val( ui.item.price );
+        return false;
+        }
+    })
+
+async function fetchData(req) {
+    let response = await fetch(req);
+    if (response.statusText == "OK") {
+        return await response.json();      
+    }else{
+        throw new Error(response.statusText);
+    }
+}
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+var table;
+let  dataSet = [];
+if (localStorage.getItem("salesDetails") != null || localStorage.getItem("salesDetails") != [] || localStorage.getItem("salesDetails") != undefined) 
+    //localStorage.removeItem("salesDetails");
+
+function getCustomers()
+{
+    let sup = [];
+    let customerList = JSON.parse(localStorage.getItem("customerList"));
+    if(customerList)
+    {
+        for (let i = 0; i < customerList.length; i++)
+        {
+            sup.push(customerList[i].fullName);
+        }
+    } 
+    return sup;
+}
+
+
+// function validateForm()
+// {
+//     let prod = $("#salesDetailsProduct")
+//     let qty = $("#salesDetailsCost")
+//     let cost = $("#salesDetailsQuantity")
+//     let err = 0;
+//     let msg = "Error: \n";
+//     if(prod.val() == "")
+//     {
+//         prod.addClass('error');
+//         msg += "Product cannot be empty \n";
+//         err = 1;
+//     }
+//     if (qty.val() == "" )
+//     {
+//         qty.addClass('error');
+//         msg += "Please add Product Quantity \n";
+//         err = 1;
+//     }
+//     if ( cost.val() == "")
+//     {
+//         cost.addClass('error');
+//         msg += "Please add Product Cost \n";
+//         err = 1;
+//     }
+//     if(err == 0){
+//         prod.removeClass('error');
+//         qty.removeClass('error');
+//         cost.removeClass('error');
+//     }
+//     else
+//     {
+//         alert(msg);
+//     }
+//     return err;
+// }
+arr = ['salesDetailsProduct','salesDetailsCost','salesDetailsQuantity'];
+function validateForm()
+{
+    let err = 0;
+    let msg = "Error: \n";
+    arr.forEach(element => {
+        let e = $('#'+element);
+        let ee =  $('#err-'+element);
+        if(e.val()=="")
+        {
+            e.addClass('error');
+            //e.attr('role','alert');
+            ee.removeClass('d-none');
+            //e.val('*this is required');
+           // e.attr("placeholder", "This is required");
+            err = 1;
+        }
+    });
+    if(err == 0){
+        arr.forEach(element => {
+            let e = $('#'+element);
+            let ee =  $('#err-'+element);
+            e.removeClass('error');
+            ee.addClass('d-none');
+        });
+    }
+
+    return err;
+}
+function clearFields()
+{
+    arr.forEach(element => {
+            let e = $('#'+element);
+            let ee =  $('#err-'+element);
+            e.removeClass('error');
+            ee.addClass('d-none');
+        });
+}
+function randomNumberID(){
+    return Math.floor(Math.random()*(1000002 - 1 + 1)) + 1;
+}
+
+function getItems() {
+    dataSet.length = 0;
+    let orderList = JSON.parse(localStorage.getItem("salesDetails"));
+    
+    if(orderList)
+    {
+        for (let i = 0; i < orderList.length; i++){
+            let temp = {
+                salesIntID: orderList[i].salesIntID,
+                salesDetailsID: orderList[i].salesDetailsID,
+                productCode: orderList[i].productCode,
+                description: orderList[i].description,
+                cost: orderList[i].cost,
+                quantity: orderList[i].quantity,
+                total: orderList[i].total,
+            };
+            if(orderList[i].salesIntID === $("#hdnInvoiceNo").val())
+            {
+                dataSet.push(temp);
+            }
+        }
+    } 
+}
+
+function computeItems() {
+    dataSet.length = 0;
+    let orderList = JSON.parse(localStorage.getItem("salesDetails"));
+    total = -0;
+    tax = -0;
+    gTotal = -0;
+    if(orderList)
+    {
+        for (let i = 0; i < orderList.length; i++)
+        {
+            if(orderList[i].salesIntID === $("#hdnInvoiceNo").val())
+            {
+               total += orderList[i].total * 1;
+            }
+        }
+    }
+    $("#beforeTax").val(total.toFixed(2));
+    $("#hdnBeforeTax").val(total.toFixed(2));
+
+    tax = total * .13;
+    $("#tax").val(tax.toFixed(2));
+    $("#hdnTax").val(tax.toFixed(2));
+    gTotal = tax + total;
+    $("#grandTotal").val(gTotal.toFixed(2));
+    $("#hdnGrandTotal").val(gTotal.toFixed(2));
+    $("#paymentTotal").val(gTotal.toFixed(2));
+}
+
+function getHeader(orderInfo)
+{
+    $("#hdnInvoiceNo").val(orderInfo);
+    //$( "#btnSaveHeader" ).html('Save Changes');
+    computeItems();
+    let orderList = JSON.parse(localStorage.getItem("salesHeader"));
+    for (let i = 0; i < orderList.length; i++)
+    {
+        if (orderList[i].salesIntID === orderInfo) 
+        {
+            $("#InvoiceNo").val(orderList[i].InvoiceNo);
+            $("#salesDate").val(orderList[i].salesDate);
+            $("#customer").val(orderList[i].customer);
+            $("#status").val(orderList[i].status);
+            $("#hdnGrandTotal").val(orderList[i].grandTotal);
+            $("#hdnTax").val(orderList[i].tax);
+            $("#hdnBeforeTax").val(orderList[i].beforeTax);
+            $("#equipment").val(orderList[i].equipment);
+            $("#serial").val(orderList[i].serial);
+            $("#machine").val(orderList[i].machine);
+            $("#equipmentDesc").val(orderList[i].equipmentDesc);
+        }
+    }
+}
+let customers = [];
+$(document).ready(function () {
+    $( "#city" ).autocomplete({
+            source: cities
+        });
+
+    const inputElement = document.getElementById('contact');
+    inputElement.addEventListener('keydown',enforceFormat);
+    inputElement.addEventListener('keyup',formatToPhone);
+    customers = getCustomers();
+
+    $( "#customer" ).autocomplete({
+        source: customers
+    });
+
+    $( "#paymentType" ).change(function() {
+        if( $( "#paymentType" ).val()=="AB")
+        {
+            $("#card").removeClass("d-none");
+            $("#cash").addClass("d-none");
+        }
+        else
+        {
+            $("#cash").removeClass("d-none");
+            $("#card").addClass("d-none");
+        }
+    });
+
+    if (localStorage.getItem("orderInfo") !== null) 
+    {
+        getHeader(localStorage.getItem("orderInfo"));
+        $("#productDetails").removeClass("d-none");
+        $("#payment").removeClass("d-none");
+        $("#printInvoice").removeClass("d-none");
+    }
+    else
+    {
+        $("#InvoiceNo").val(getRandomInt(1000));
+        let today = new Date().toISOString().split('T')[0];
+        $("#salesDate").val(today);
+    }
+    getItems();
+    table = $('#ordersDetails').DataTable({
+        language:{searchPlaceholder:"Eg. Shaft"},
+        data: dataSet,
+        columns: [
+            { title: 'Order Details ID',data: "salesDetailsID" },
+            { title: 'UPC', data: "productCode" },
+            { title: 'Description', data: "description" },
+            { title: 'Price', data: "cost" },
+            { title: 'Quantity', data: "quantity" },
+            { title: 'Total', data: "total" },
+            { title: 'Action' },
+        ],
+        columnDefs: [
+            {
+                targets: -1,
+                data: null,
+                defaultContent: '<button type="button" class="btn btn-primary btn-xs" id="edit-btn2">Edit</button>  <button type="button" class="btn btn-danger btn-xs" id="del-btn2">Remove Item</button>'
+            },
+            {
+                target: 0,
+                visible: false,
+            },
+            { orderable: false, searchable: false, targets: -1 }
+        ], 
+    });
+    
+    //save items
+    $( "#btnSave" ).click(function() {
+        if(!validateCustomer())
+        {
+            $('#productModal').modal('toggle');
+                addCustomer();
+                clearCustomerFields();
+        }
+        
+    });
+    $( "#btnAddProduct" ).click(function() {
+        if(!validateForm())
+        {
+            $( "#btnAddProduct" ).html('Add Item');
+            var index = $("#hdnIndex");
+            if(dataSet.length == 0)
+            {
+                if( $("#hdnInvoiceNo").val() == '')
+                {
+                    addHeader();
+                }
+                else
+                {
+                    addHeader();
+                    let salesHeader = JSON.parse(localStorage.getItem("salesHeader"));
+                    //Delete from the storage
+                    for(let i = 0; i < salesHeader.length; i++){
+                        if(salesHeader[i].salesIntID === $("#hdnInvoiceNo").val())
+                        {
+                            salesHeader.splice(i,1);
+                        }
+                    }
+                    localStorage.setItem("salesHeader", JSON.stringify(salesHeader));
+                }
+            }
+    
+            if (index.val() == '')
+            {
+                addItem();
+            }
+            else{
+                addItem();
+                let orderList = JSON.parse(localStorage.getItem("salesDetails"));
+                //Delete from the storage
+                for(let i = 0; i < orderList.length; i++){
+                    if(orderList[i].salesDetailsID === index.val())
+                    {
+                        orderList.splice(i,1);
+                    }
+                }
+                localStorage.setItem("salesDetails", JSON.stringify(orderList));
+                alert("Product has been updated!");
+            }
+            index.val('');
+            getItems();
+            remakeDT();
+            clearProductFields();
+            computeItems();
+        }
+        
+    });
+
+    //delete
+    $('#ordersDetails tbody').on('click', "#del-btn2", function() {
+        var row = $(this).parents('tr')[0];
+        var data = table.row(row).data();
+        let confirmAction = confirm("Are you sure to remove item: "+data['description']+"?");
+        if (confirmAction) {
+            alert("Item Deleted");
+            let orderList = JSON.parse(localStorage.getItem("salesDetails"));
+            for(let i = 0; i < orderList.length; i++)
+            {
+                if (orderList[i].salesDetailsID === data['salesDetailsID'])
+                {
+                    orderList.splice(i,1);
+                }
+            }
+            localStorage.setItem("salesDetails", JSON.stringify(orderList)); //reset the values in the local storage
+        } 
+        getItems();
+        remakeDT();
+        computeItems();
+    });
+    //edit
+    $('#ordersDetails tbody').on('click', "#edit-btn2", function() {
+        var row = $(this).parents('tr')[0];
+        var data = table.row(row).data();
+    
+        let orderList = JSON.parse(localStorage.getItem("salesDetails"));
+        for (let i = 0; i < orderList.length; i++)
+        {
+            if (orderList[i].salesDetailsID === data['salesDetailsID']) 
+            {
+                $("#OrderCode").val(orderList[i].productCode);
+                $("#salesDetailsProduct").val(orderList[i].description);
+                $("#salesDetailsCost").val(orderList[i].cost);
+                $("#salesDetailsQuantity").val(orderList[i].quantity);
+            }
+        }
+        $("#hdnIndex").val(data['salesDetailsID']);
+        $( "#btnAddProduct" ).html('Update Item');
+        computeItems();
+    });
+
+    // $( "#btnSaveHeader" ).click(function() {
+    //     $( "#btnSaveHeader" ).html('Save Changes');
+
+    //     if( $("#hdnInvoiceNo").val() == '')
+    //     {
+    //         alert( "New Sales Created! Please add products to the sales" );
+    //         addHeader();
+    //         $("#productDetails").removeClass("d-none");
+    //     }
+    //     else
+    //     {
+    //         addHeader();
+    //         let salesHeader = JSON.parse(localStorage.getItem("salesHeader"));
+    //         //Delete from the storage
+    //         for(let i = 0; i < salesHeader.length; i++){
+    //             if(salesHeader[i].salesIntID === $("#hdnInvoiceNo").val())
+    //             {
+    //                 salesHeader.splice(i,1);
+    //             }
+    //         }
+    //         localStorage.setItem("salesHeader", JSON.stringify(salesHeader));
+            
+    //         alert("Order has been updated!");
+    //     }
+        
+    // });
+});    
+//todo
+function addHeader()
+{
+    var salesIntID;
+    if (localStorage.getItem("orderInfo") !== null) 
+    {
+        salesIntID = localStorage.getItem("orderInfo");
+    }
+    else
+    {
+        salesIntID = randomNumberID() + $("#InvoiceNo").val() + randomNumberID();
+        $("#hdnInvoiceNo").val(salesIntID);
+    }
+
+    let newDs = {
+        salesIntID: salesIntID,
+        InvoiceNo: $("#InvoiceNo").val(),
+        grandTotal: $("#hdnGrandTotal").val(),
+        tax:  $("#hdnTax").val(),
+        beforeTax: $("#hdnBeforeTax").val(),
+        salesDate: $("#salesDate").val(),
+        status: $("#status").val(),
+        customer: $("#customer").val(),
+        equipment: $("#equipment").val(),
+        serial: $("#serial").val(),
+        machine: $("#machine").val(),
+        equipmentDesc: $("#equipmentDesc").val(),
+    };
+    if (localStorage.getItem("salesHeader") === null || localStorage.getItem("salesHeader") === [] || localStorage.getItem("salesHeader") === undefined) 
+    {
+        let salesHeader = [];
+        salesHeader.push(newDs);
+        localStorage.setItem("salesHeader", JSON.stringify(salesHeader));
+    } 
+    else
+    {
+        let salesHeader = JSON.parse(localStorage.getItem("salesHeader"));
+        salesHeader.push(newDs);
+        localStorage.setItem("salesHeader", JSON.stringify(salesHeader));
+    }
+    //dataSet.push(newDs);
+}
+
+function clearProductFields()
+{
+    $("#OrderCode").val('');
+    $("#salesDetailsProduct").val('');
+    $("#salesDetailsCost").val('');
+    $("#salesDetailsQuantity").val('');
+}
+
+function remakeDT()
+{
+    $('#ordersDetails').DataTable().clear();
+    $('#ordersDetails').DataTable().destroy();
+        table = $('#ordersDetails').DataTable({
+            language:{searchPlaceholder:"Eg. Shaft"},
+            data: dataSet,
+            columns: [
+                { title: 'Order Details ID',data: "salesDetailsID" },
+                { title: 'UPC', data: "productCode" },
+                { title: 'Description', data: "description" },
+                { title: 'Price', data: "cost" },
+                { title: 'Quantity', data: "quantity" },
+                { title: 'Total', data: "total" },
+                { title: 'Action' },
+            ],
+            columnDefs: [
+                {
+                    targets: -1,
+                    data: null,
+                    defaultContent: '<button type="button" class="btn btn-primary btn-xs" id="edit-btn2">Edit</button>  <button type="button" class="btn btn-danger btn-xs" id="del-btn2">Remove Item</button>'
+                },
+                {
+                    target: 0,
+                    visible: false,
+                },
+                { orderable: false, searchable: false, targets: -1 }
+            ], 
+        });
+}
+
+function addItem()
+{
+    const orderID = randomNumberID() + $("#salesDetailsProduct").val() + randomNumberID();
+    $("#payment").removeClass("d-none");
+    $("#printInvoice").removeClass("d-none");
+    let newDs = {
+        salesDetailsID: orderID,
+        salesIntID: $("#hdnInvoiceNo").val(),
+        productCode: $("#OrderCode").val().toUpperCase(),
+        description: $("#salesDetailsProduct").val(),
+        cost: $("#salesDetailsCost").val(),
+        quantity: $("#salesDetailsQuantity").val(),
+        total: ($("#salesDetailsCost").val() *  $("#salesDetailsQuantity").val()).toFixed(2),
+    };
+    if (localStorage.getItem("salesDetails") === null || localStorage.getItem("salesDetails") === [] || localStorage.getItem("salesDetails") === undefined) 
+    {
+        let orderList = [];
+        orderList.push(newDs);
+        localStorage.setItem("salesDetails", JSON.stringify(orderList));
+    } 
+    else
+    {
+        let orderList = JSON.parse(localStorage.getItem("salesDetails"));
+        orderList.push(newDs);
+        localStorage.setItem("salesDetails", JSON.stringify(orderList));
+    }
+    
+}
+
+function addCustomer()
+{
+    const custID = randomNumberID() + $("#customerFName").val()+ $("#customerLName").val() + randomNumberID();
+
+    let newDs = {
+        custID: custID,
+        customerFName: $("#customerFName").val().toUpperCase(),
+        customerLName: $("#customerLName").val().toUpperCase(),
+        fullName: $("#customerFName").val().toUpperCase() + ' '+$("#customerLName").val().toUpperCase(),
+        contact: $("#contact").val(),
+        address: $("#address").val(),
+        address2: $("#address2").val(),
+        city: $("#city").val(),
+        province: $("#province").val(),
+        postal: $("#postal").val(),
+    };
+    if (localStorage.getItem("customerList") === null || localStorage.getItem("customerList") === [] || localStorage.getItem("customerList") === undefined) 
+    {
+        let customerList = [];
+        customerList.push(newDs);
+        localStorage.setItem("customerList", JSON.stringify(customerList));
+    } 
+    else
+    {
+        let customerList = JSON.parse(localStorage.getItem("customerList"));
+        customerList.push(newDs);
+        localStorage.setItem("customerList", JSON.stringify(customerList));
+    }
+    customers= getCustomers();
+    window.location.reload();
+}
+
+function clearCustomerFields()
+{
+    $("#customerFName").val('');
+    $("#customerLName").val('');
+    $("#contact").val('');
+    $("#address").val('');
+    $("#address2").val('');
+    $("#city").val('');
+    $("#province").val('');
+    $("#postal").val('');
+}
+const loginUser = user.map(({ username }) => username);
+  document.getElementById("username").innerHTML = "Hello " + loginUser + "!";
+</script>

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script
+      src="https://kit.fontawesome.com/49caa8d480.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.js"
+    ></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="/js/user.js" type="text/javascript"></script>
+    <title>Home</title>
+  </head>
+
+  <body>
+    <main class="" id="main"> 
+    <div class="container display-8">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="home.html"
+            ><img src="/img/logo_nav_white.png" alt="ESM LOGO" width="120px"
+          /></a>
+          <label id="username">Username</label>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+            <form class="d-flex">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown ms-10">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <i class="fas fa-box-open"></i> &nbsp; Inventory
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="orders.html"
+                        ><i class="fas fa-file-signature"></i> &nbsp; Orders</a
+                      >
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a class="dropdown-item" href="suppliers.html"
+                        ><i class="fas fa-dolly"></i> &nbsp;Suppliers</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="products.html"
+                        ><i class="fas fa-tachometer-alt"></i> &nbsp;Products</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li tabindex="2" class="nav-item dropdown ms-10">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <i class="fas fa-tags"></i> &nbsp; Sales
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="pos.html"
+                        ><i class="fas fa-users"></i> &nbsp; POS</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="sales.html"
+                        ><i class="fas fa-users"></i> &nbsp; Sales Record</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown ms-10">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <i class="fas fas fa-tools"></i> &nbsp; Maintenance
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="employees.html"
+                        ><i class="fas fa-users"></i> &nbsp; Employees</a
+                      >
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a class="dropdown-item" href="customers.html"
+                        ><i class="fas fa-user-alt"></i> &nbsp;Customers</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="reports.html"
+                    ><i class="fas fas fa-chart-line"></i>&nbsp; Reports</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html"
+                    ><i class="fas fa-sign-out-alt"> </i>&nbsp;Logout</a
+                  >
+                </li>
+              </ul>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container pt-4">
+      <nav aria-label="breadcrumb" class="breadcrumb d-flex justify-content-between">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Sales</li>
+        </ol>
+        <!-- <li class="btn-link help-popover" rel="popover" data-placement="bottom" data-title="Help Center" data-html="true" data-content="#"> <a href="#" >Help Center </a></li> -->
+        <li class="btn-link"  onclick="toggleSidebar()"><a href="#">Help</a></li>
+      </nav>
+      <div class="row">
+        <div class="col-sm">
+          <h2 class="">Sales</h2>
+        </div>
+        <div class="col-sm"></div>
+        <div class="col-sm text-alig"></div>
+        <div class="col mb-9 float-right">
+          <a
+            href="pos.html"
+            class="btn btn-primary"
+            onclick="localStorage.removeItem('orderInfo');"
+            >Create New Sale</a
+          >
+        </div>
+      </div>
+      <hr />
+      <div class="row">
+        <div class="col-sm-1">
+          <h4 class="">Filter</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <label for="filter">Order Status:</label>
+          <select id="filter" class="form-control form-select">
+            <option value="Pending">Pending</option>
+            <option value="Processed">Processed</option>
+            <option value="All">All</option>
+          </select>
+        </div>
+      </div>
+      <hr />
+      <table
+        id="orders"
+        class="display compact table-striped"
+        width="100%"
+      ></table>
+    </div>
+  </main>
+
+  <!-- SideBar Help -->
+  <!-- <div class="sidebar-tab" id="sidebar-tab">
+    <div class="vertical-text text-center" id="sidebar-tab-text" onclick="toggleSidebar()"><span class="arrow vertical-text"></span>CLICK TO VIEW HELP<span class="arrow vertical-text"></span></div>
+  </div> -->
+  <div class="sidebar" id="sidebar">
+    <div class="container-liner">
+      <h4>SALES Page</h4>
+      <div>
+        This is the <b>Sales</b> page where you can navigate by pointing and clicking your mouse or tabbing using your keyboard and enter key. </br></br> 
+        <b>CREATE NEW SALE</b> click this option to navigate to the Point of Sale (POS) page. </br></br> 
+        <b>ORDER STATUS</b> you can select the status from the dropdown list: Pending, Processed, All. </br></br> 
+        <b>SHOW ENTRIES</b> additional filter you can set based on number of records: 10, 25, 50, 100. </br></br> 
+        <b>SEARCH</b> input a valid order number to filter, functionality work in progress. </br></br> 
+        <b>TABLE</b> you can sort the records by clicking the Order No, Sales Date, Customer, Status headers. </br></br> 
+        <b>EDIT</b> click this option to navigate to another page where you can modify existing order. </br></br> 
+        <b>REMOVE ITEM</b> click this button to delete an item. </br></br> <b>PREVIOUS/NEXT</b> you can select the paging based on number of available records.
+      </div>
+    </div>
+  </div>
+
+
+  </body>
+</html>
+<script>
+
+  // sidebar Help
+$(function(){
+  $("#sidebar-tab-text").width($("#sidebar").height());
+});
+$( window ).resize(function() {
+  $("#sidebar-tab-text").width($("#sidebar").height());
+});
+/* End of unsure centering */
+
+//The only necessary piece of code
+function toggleSidebar(){
+  $("#sidebar").toggleClass("move-to-left");
+  $("#sidebar-tab").toggleClass("move-to-left");
+  $("main").toggleClass("move-to-left-partly");
+  $(".arrow").toggleClass("active");
+}
+
+
+//helpcenter
+$(document).ready(function() {
+  $('.help-popover').popover({
+    placement: 'bottom',
+    title: 'SALES PAGE',
+    html: true,
+    content: "This is the <b>Sales</b> page where you can navigate by pointing and clicking your mouse or tabbing using your keyboard and enter key. </br></br> <b>CREATE NEW SALE</b> click this option to navigate to the Point of Sale (POS) page. </br></br> <b>ORDER STATUS</b> you can select the status from the dropdown list: Pending, Processed, All. </br></br> <b>SHOW ENTRIES</b> additional filter you can set based on number of records: 10, 25, 50, 100. </br></br> <b>SEARCH</b> input a valid order number to filter, functionality work in progress. </br></br> <b>TABLE</b> you can sort the records by clicking the Order No, Sales Date, Customer, Status headers. </br></br> <b>EDIT</b> click this option to navigate to another page where you can modify existing order. </br></br> <b>REMOVE ITEM</b> click this button to delete an item. </br></br> <b>PREVIOUS/NEXT</b> you can select the paging based on number of available records."  });
+//   $(document).on("click", ".popover .close" , function(){
+//         $(this).parents(".popover").popover('hide');
+//     });
+});
+
+  var table;
+  let dataSet = [];
+  if (
+    localStorage.getItem("salesHeader") != null ||
+    localStorage.getItem("salesHeader") != [] ||
+    localStorage.getItem("salesHeader") != undefined
+  )
+    if (
+      localStorage.getItem("orderInfo") != null ||
+      localStorage.getItem("orderInfo") != [] ||
+      localStorage.getItem("orderInfo") != undefined
+    )
+      //localStorage.removeItem("salesHeader");
+
+      localStorage.removeItem("orderInfo");
+
+  function getItems(fltr = "Pending") {
+    dataSet.length = 0;
+    let orderList = JSON.parse(localStorage.getItem("salesHeader"));
+    console.log(orderList);
+    if (orderList) {
+      for (let i = 0; i < orderList.length; i++) {
+        let temp = {
+          salesIntID: orderList[i].salesIntID,
+          InvoiceNo: orderList[i].InvoiceNo,
+          salesDate: orderList[i].salesDate,
+          status: orderList[i].status,
+          grandTotal: orderList[i].grandTotal,
+          customer: orderList[i].customer,
+        };
+        if (fltr == "Pending") {
+          if (orderList[i].status === "Pending") dataSet.push(temp);
+        } else if (fltr == "Processed") {
+          if (orderList[i].status === "Processed") dataSet.push(temp);
+        } else {
+          dataSet.push(temp);
+        }
+      }
+    }
+  }
+
+  $(document).ready(function () {
+    getItems();
+    table = $("#orders").DataTable({
+      language:{searchPlaceholder:"Eg. 075"},
+      data: dataSet,
+      columns: [
+        { title: "salesIntID", data: "salesIntID" },
+        { title: "Order No", data: "InvoiceNo" },
+        { title: "Sales Date", data: "salesDate" },
+        { title: "Customer", data: "customer" },
+        { title: "Status", data: "status" },
+        { title: "Action" },
+      ],
+      columnDefs: [
+        {
+          targets: -1,
+          data: null,
+          defaultContent:
+            '<button type="button" class="btn btn-primary btn-xs" id="edit-btn2">Edit</button>  <button type="button" class="btn btn-danger btn-xs" id="del-btn">Remove Item</button>',
+        },
+        {
+          target: 0,
+          visible: false,
+        },
+        { orderable: false, searchable: false, targets: -1 },
+      ],
+    });
+
+    $("#filter").change(function () {
+      if ($("#filter").val() == "Pending") {
+        getItems("Pending");
+      } else if ($("#filter").val() == "Processed") {
+        getItems("Processed");
+      } else {
+        getItems(0);
+      }
+      remakeDT();
+    });
+
+    //delete
+    $("#orders tbody").on("click", "#del-btn", function () {
+      var row = $(this).parents("tr")[0];
+      var data = table.row(row).data();
+
+      let confirmAction = confirm(
+        "Are you sure to remove item: " + data["InvoiceNo"] + "?"
+      );
+      if (confirmAction) {
+        alert("Item Deleted");
+        //Delete header
+        let salesHeader = JSON.parse(localStorage.getItem("salesHeader"));
+        for (let i = 0; i < salesHeader.length; i++) {
+          if (salesHeader[i].salesIntID === data["salesIntID"]) {
+            salesHeader.splice(i, 1);
+          }
+        }
+        localStorage.setItem("salesHeader", JSON.stringify(salesHeader));
+        //delete details
+        let orderList = JSON.parse(localStorage.getItem("orderDetails"));
+        if (orderList) {
+          for (let i = 0; i < orderList.length; i++) {
+            if (orderList[i].salesIntID === data["salesIntID"]) {
+              orderList.splice(i, 1);
+            }
+          }
+          localStorage.setItem("orderDetails", JSON.stringify(orderList)); //reset the values in the local storage
+        }
+      }
+      getItems("Open");
+      remakeDT();
+    });
+    //edit
+    $("#orders tbody").on("click", "#edit-btn2", function () {
+      var row = $(this).parents("tr")[0];
+      var data = table.row(row).data();
+
+      //window.open("/new_orders.html",'_self');
+      localStorage.setItem("orderInfo", data["salesIntID"]);
+      window.location.replace("pos.html");
+    });
+  });
+
+  function remakeDT() {
+    $("#orders").DataTable().clear();
+    $("#orders").DataTable().destroy();
+    table = $("#orders").DataTable({
+      language:{searchPlaceholder:"Eg. John Smith"},
+      data: dataSet,
+      columns: [
+        { title: "salesIntID", data: "salesIntID" },
+        { title: "Order No", data: "InvoiceNo" },
+        { title: "Sales Date", data: "salesDate" },
+        { title: "Customer", data: "customer" },
+        { title: "Status", data: "status" },
+        { title: "Action" },
+      ],
+      columnDefs: [
+        {
+          targets: -1,
+          data: null,
+          defaultContent:
+            '<button type="button" class="btn btn-primary btn-xs" id="edit-btn2">Edit</button>  <button type="button" class="btn btn-danger btn-xs" id="del-btn">Remove Item</button>',
+        },
+        {
+          target: 0,
+          visible: false,
+        },
+        { orderable: false, searchable: false, targets: -1 },
+      ],
+    });
+  }
+  const loginUser = user.map(({ username }) => username);
+  document.getElementById("username").innerHTML = "Hello " + loginUser + "!";
+</script>

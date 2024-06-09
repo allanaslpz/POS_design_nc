@@ -1,0 +1,25 @@
+{
+    "data":[
+        {
+            "productID": "1",
+            "productCode": "11212",
+            "productDesc": "Engine",
+            "Supplier": "Engine Depot",
+            "initialPrice":"120",
+            "CurrentPrice":"125",
+            "InitialQuantity":"125",
+            "CurrentQuantity":"55"
+        },
+        { 
+            "productID": "2",
+            "productCode": "222",
+            "productDesc": "Engine Screw",
+            "Supplier": "Screw Depot",
+            "initialPrice":"9",
+            "CurrentPrice":"10",
+            "InitialQuantity":"50",
+            "CurrentQuantity":"10"
+        }
+    ]
+    
+}
